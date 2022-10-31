@@ -1,0 +1,395 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head id="header">
+<!--Linking external css file-->
+    <link rel="stylesheet" href="styles.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--Embedded css styling-->
+<style>
+* {
+  box-sizing: border-box;
+}
+
+
+/* div.outer {width:100%; height:698px;} */
+div.outer img { position: fixed; bottom: 0px; right: 0px; height: 150px; }
+
+#content{
+  Position: fixed;
+  bottom:10px;
+  right:0px; 
+  
+  height: 50px;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  font-style: italic;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+#foot {
+  text-align: center;
+  padding: 3px;
+  background-color: green;
+  color: white;
+}
+
+.required-field::before {
+  content: "*";
+  color: red;
+}
+
+#myDIV
+{
+Text-align: left;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: green;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: green;
+}
+
+input[type=cancel] {
+  background-color: red;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=cancel]:hover {
+  background-color: red;
+}
+.container {
+  border-radius: 5px;
+  background-color: lightgrey;
+  padding-left: 370px;
+  
+}
+
+.col-25 {
+  float: center;
+  width: 100%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: center;
+  width: 65%;
+  margin-top: 10px;
+  
+
+}
+
+.input1{
+      
+      width: 300px;
+      padding: 2px 2px;
+      box-sizing: border-box;
+     }
+
+
+.input1::placeholder {
+       font-style: italic;
+       font-weight: bold;
+}
+
+
+.input2{
+      
+      width: 300px;
+      padding: 2px 2px;
+      box-sizing: border-box;
+     }
+
+
+.input2::placeholder {
+       font-style: italic;
+       font-weight: bold;
+}
+
+
+.bg{
+  width: 500px;
+  height: 70px;
+  padding: 0px;
+  border: 5px solid green;
+  text-align: center;
+  background-color: #FFCC33;
+  box-shadow: 5px 5px green;
+}
+
+
+#myDIV1 {
+  
+  
+  color: black;
+  Text-align:center;
+  
+}
+
+#submitbutton{
+
+
+justify-content: center;
+display: flex; 
+}
+
+#cancelbutton{
+
+
+justify-content: left;
+display: flex; 
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=cancel] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+
+<style type="text/css">
+   .block {
+      display: block;
+   }
+</style>
+
+</head>
+<body style="background-color:lightgray;">
+
+<center><div class=bg><h2>Survey form for CS Department<h2></div></center>
+<br>
+
+<div class="container">
+  <!--Start of form-->
+    <form action="/action_page.php">
+         <div class="row">
+             <div class="col-25">
+                 <label for="name"><span class="bolded">First Name<span class="required-field"></span></label>
+             </div>
+             <div class="col-75">
+                 <input type="text"  id="fname" name="First name" class="input1" placeholder="Enter Your First name" required autofocus>
+             </div>
+         </div>
+
+        <div class="row">
+          <div class="col-25">
+              <label for="lname"><span class="bolded">Last Name<span class="required-field"></span></label>
+          </div>
+          <div class="col-75">
+              <input type="text"  id="name" name="Last name" class="input1" placeholder="Enter Your Last name" required autofocus>
+          </div>
+      </div>
+         
+         <div class="row">
+             <div class="col-25">
+                 <label for="Emailid"><span class="bolded"> Email ID <span class="required-field"> </span></label>
+             </div>
+             <div class="col-75">
+                 <input type="text" id="Emailid" class="input1" name="Email ID" placeholder="@gmu.edu" required>
+             </div>
+         </div>
+    
+         <div class="row">
+             <div class="col-25">
+                 <label for="dos"><span class="bolded"> Date of Survey <span class="required-field"></span></label>
+             </div>
+             <div class="col-75">
+                 <input type="date" id="dos" class="input1" name="Date of Survey" required>  
+             </div>
+         </div>
+         
+         <div class="row">
+             <div class="col-25">
+                 <label for="address"><span class="bolded"> Address <span class="required-field"></span></label>
+             </div>
+             <div class="col-75">
+        		<input type="text" id="address" class="input1" name="Address" placeholder="Street Address" required>
+        		<input type="text" id="address" class="input1" name="Address" placeholder="City" required>
+        		<input type="text" id="address" class="input1" name="Address" placeholder="State" required>
+        		<input type="text" id="address" class="input1" name="Address" placeholder="Zip" required>
+             </div>
+         </div>
+    
+         <div class="row">
+             <div class="col-25">
+                 <label for="contact"><span class="bolded"> Contact Number <span class="required-field"></span></label>
+             </div>
+             <div class="col-75">
+             	<input type="text" id="contact" class="input1" name="contact number" placeholder="Enter your number" required>
+             </div>
+         </div>
+
+         <div class="row">
+             <div class="col-25">
+        		<label for="subject"><span class="bolded"> What did you like the most in college </span></label>
+             </div>
+             <div class="col-75">
+       		<input type="checkbox" id="item1" name="like" value="">
+       		<label for="item1"> Student </label><br>
+       		<input type="checkbox" id="item2" name="like" value="">
+       		<label for="item2"> Location </label><br>
+       		<input type="checkbox" id="item3" name="like" value="">
+       		<label for="item3"> Campus</label><br>
+       		<input type="checkbox" id="item4" name="like" value="">
+       		<label for="item4"> Atmopshere </label><br>
+       		<input type="checkbox" id="item5" name="like" value="">
+       		<label for="item5"> Dorm rooms </label><br>
+       		<input type="checkbox" id="item6" name="like" value="">
+       		<label for="item6"> Sports </label><br>  
+            </div>
+        </div>
+     
+        <!-- <div class="row">
+            <div class="col-25">
+        	        <label for="subject"><span class="bolded"> Expected Graduation Date <span class="required-field"> </span></label>
+            </div>
+            <div class="col-75">
+                <label for="browser"></label>
+                <input list="browsers" name="browser" class="input1" id="browser" placeholder="Month" required> 
+      	        <datalist id="browsers">
+       			<option value="January">January</option>
+       			<option value="February">
+       			<option value="March">
+       			<option value="April">
+       			<option value="May">
+       			<option value="June">
+       			<option value="July">
+       			<option value="August">
+       			<option value="September">
+       			<option value="October">
+       			<option value="November">
+       			<option value="December">
+                </datalist> 
+                <input list="text"  class="input1"  placeholder="Year" required> 
+            </div>
+        </div> -->
+     
+        <div class="row">
+            <div class="col-25">
+                <label for="subject"><span class="bolded"> How did you become interested in University </span></label>
+            </div>
+            <div class="col-75">
+        	    	<label class="block"><input type="radio" name="radgroup" value="friends">Friends</label>
+        	    	<label class="block"><input type="radio" name="radgroup" value="television">Television</label>
+            	<label class="block"><input type="radio" name="radgroup" value="internet">Internet</label>
+            	<label class="block"><input type="radio" name="radgroup" value="other">Other</label>
+            </div>
+        </div>
+    
+ 
+     
+        <div class="row">
+            <div class="col-25">
+                <label for="subject"><span class="bolded"> How likely would you recommend George Mason University to your friends/Colleagues <span class="required-field"></span></label>
+            </div>
+            <div class="col-75">
+                <label for="recommend"></label>
+                <input list="recommends" name="browser" class="input1"id="recommend" class="input1" placeholder="How likely would you recommend GMU..."  required>
+      	        <datalist id="recommends">
+       			<option value="Very Likely">Very Likely</option>
+       			<option value="Likely"></option>
+       			<option value="Unlikely"></option>
+       
+                </datalist> 
+             </div>
+         </div>
+     
+         <div class="row">
+          <div class="col-25">
+                <label for="subject"><span class="bolded"> Raffle </span></label>
+          </div>
+          <div class="col-75">
+              <textarea id="subject"  bold name="subject" placeholder="Please enter ten comma seperated numbers ranging from 1 to 100" style="height:40px" ></textarea>
+          </div> 
+
+
+         <div class="row">
+            <div class="col-25">
+        	        <label for="subject"><span class="bolded"> Additional Comments </span></label>
+            </div>
+            <div class="col-75">
+                <textarea id="subject"  bold name="subject" placeholder="Additional Comments.." style="height:100px" ></textarea>
+            </div>
+         </div>
+        
+         <center>
+         <div id="submitbutton">
+             <input type="submit" text-align: center>
+         </div>
+         </center>
+         <center>
+          <div id="cancelbutton">
+            <!-- <input type="cancel" text-align: center> -->
+            <button type="cancel" class="btn btn-primary">Cancel</button>
+
+          </div>
+         </center>
+             
+
+</center>
+</form>
+</div>
+
+
+
+
+<div class="outer"> 
+        <img src="./1024px-George_Mason_University_logo.png">
+</div>
+
+
+        
+    
+
+
+</body>
+</html>
+
