@@ -5,8 +5,6 @@ pipeline {
         stage("compile code") {
             steps {
                 checkout scm
-		sh 'java -version'
-		sh 'jar -cvf SWE645HW1P2.war *'
             }
         }
         
