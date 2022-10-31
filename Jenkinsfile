@@ -12,7 +12,7 @@ pipeline {
             steps {
                 script {
                     ourapp = docker.build("krishnamandanapu/ss:${env.BUILD_ID}")
-		    sh 'docker login -u krishnamandanapu -p Kri$hn@1234'
+		    sh 'docker login -u jagadishramidi -p Qwerty@123'
 		    ourapp.push("${env.BUILD_ID}")
                 }
             }
@@ -22,7 +22,7 @@ pipeline {
           steps{
             sh 'kubectl config view'
             sh "kubectl get deployments"
-            sh "kubectl set image deployment/hw2dep container-0= krishnamandanapu/ss:${env.BUILD_ID}"
+            sh "kubectl set image deployment/hw2dep container-0=krishnamandanapu/ss:${env.BUILD_ID}"
           }
 		    }
     }    
