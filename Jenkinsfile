@@ -12,7 +12,7 @@ pipeline {
             steps {
                 script {
                     ourapp = docker.build("krishnamandanapu/ss:${env.BUILD_ID}")
-		    sh 'docker login -u krishnamandanapu -p Kri$hn@1234'
+		    sh 'docker login -u krishnamandanapu -p Krishn@1234'
 		    ourapp.push("${env.BUILD_ID}")
                 }
             }
